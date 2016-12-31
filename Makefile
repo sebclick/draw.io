@@ -4,6 +4,8 @@ VERSION ?= latest
 INSTANCE = default
 PORTS = 8080:80
 
+.PHONY: build run start stop rm
+
 build:
 	docker build -t $(NS)/$(NAME):$(VERSION) .
 
